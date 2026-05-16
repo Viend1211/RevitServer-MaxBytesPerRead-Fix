@@ -157,18 +157,7 @@ web.config.bak
 
 ---
 
-## Build EXE
 
-Using PS2EXE:
-
-```powershell
-Install-Module ps2exe -Scope CurrentUser
-Import-Module ps2exe
-
-Invoke-PS2EXE `
-".\Fix-RevitServer.ps1" `
-".\Fix-RevitServer.exe"
-```
 
 ---
 
