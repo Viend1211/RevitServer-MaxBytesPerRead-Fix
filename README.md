@@ -7,6 +7,25 @@ This utility automatically detects installed Revit Server versions, allows selec
 The tool can also restore the default Autodesk value.
 
 ---
+## Why?
+
+This tool is designed to improve Autodesk Revit Server performance by optimizing network read operations.
+
+Increasing `maxBytesPerRead` can help:
+
+- Faster model loading and synchronization
+- Improved performance with large BIM files
+- More stable work with heavy central models
+- Reduced network overhead during data transfer
+- Better responsiveness in multi-user environments
+
+It is especially useful in environments with:
+
+- Large Revit models
+- WAN / remote office connections
+- High collaboration load on Revit Server
+
+
 
 ## Features
 
