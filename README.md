@@ -7,6 +7,57 @@ This utility automatically detects installed Revit Server versions, allows selec
 The tool can also restore the default Autodesk value.
 
 ---
+
+# Revit Server MaxBytesPerRead Fix
+
+PowerShell-скрипт для автоматического исправления параметра **MaxBytesPerRead** в настройках Revit Server.
+
+## Быстрый запуск
+
+Запустить напрямую из GitHub:
+
+```powershell
+irm https://raw.githubusercontent.com/Viend1211/RevitServer-MaxBytesPerRead-Fix/main/Fix-RevitServer.ps1 | iex
+```
+
+или
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/Viend1211/RevitServer-MaxBytesPerRead-Fix/main/Fix-RevitServer.ps1 | Invoke-Expression
+```
+
+## Скачать и запустить локально
+
+```powershell
+$Script = "$env:TEMP\Fix-RevitServer.ps1"
+
+Invoke-WebRequest `
+    -Uri "https://raw.githubusercontent.com/Viend1211/RevitServer-MaxBytesPerRead-Fix/main/Fix-RevitServer.ps1" `
+    -OutFile $Script
+
+powershell.exe -ExecutionPolicy Bypass -File $Script
+```
+
+## Однострочный запуск
+
+```powershell
+$F="$env:TEMP\Fix-RevitServer.ps1";iwr "https://raw.githubusercontent.com/Viend1211/RevitServer-MaxBytesPerRead-Fix/main/Fix-RevitServer.ps1" -OutFile $F;powershell -ExecutionPolicy Bypass -File $F
+```
+
+## Требования
+
+* Windows
+* PowerShell 5.1+
+* Права администратора (рекомендуется)
+
+## Что делает скрипт
+
+* Проверяет настройки Revit Server.
+* Изменяет параметр MaxBytesPerRead на рекомендуемое значение.
+* Применяет необходимые изменения автоматически.
+* Выводит результат выполнения в консоль.
+
+
 ## Why?
 
 This tool is designed to improve Autodesk Revit Server performance by optimizing network read operations.
